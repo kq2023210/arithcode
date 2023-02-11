@@ -1,0 +1,55 @@
+# Project: 项目1
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = c2/cross_desert.o c2/dechotemizing.o c2/newton.o main.o c1/class.o c1/HeapSortmain.o c1/Insersort.o c1/Selectsort.o c1/sortmain.o c1/Two_diagonal_lines.o
+LINKOBJ  = c2/cross_desert.o c2/dechotemizing.o c2/newton.o main.o c1/class.o c1/HeapSortmain.o c1/Insersort.o c1/Selectsort.o c1/sortmain.o c1/Two_diagonal_lines.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = 项目1.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+c2/cross_desert.o: c2/cross_desert.cpp
+	$(CPP) -c c2/cross_desert.cpp -o c2/cross_desert.o $(CXXFLAGS)
+
+c2/dechotemizing.o: c2/dechotemizing.cpp
+	$(CPP) -c c2/dechotemizing.cpp -o c2/dechotemizing.o $(CXXFLAGS)
+
+c2/newton.o: c2/newton.cpp
+	$(CPP) -c c2/newton.cpp -o c2/newton.o $(CXXFLAGS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+c1/class.o: c1/class.cpp
+	$(CPP) -c c1/class.cpp -o c1/class.o $(CXXFLAGS)
+
+c1/HeapSortmain.o: c1/HeapSortmain.cpp
+	$(CPP) -c c1/HeapSortmain.cpp -o c1/HeapSortmain.o $(CXXFLAGS)
+
+c1/Insersort.o: c1/Insersort.cpp
+	$(CPP) -c c1/Insersort.cpp -o c1/Insersort.o $(CXXFLAGS)
+
+c1/Selectsort.o: c1/Selectsort.cpp
+	$(CPP) -c c1/Selectsort.cpp -o c1/Selectsort.o $(CXXFLAGS)
+
+c1/sortmain.o: c1/sortmain.cpp
+	$(CPP) -c c1/sortmain.cpp -o c1/sortmain.o $(CXXFLAGS)
+
+c1/Two_diagonal_lines.o: c1/Two_diagonal_lines.cpp
+	$(CPP) -c c1/Two_diagonal_lines.cpp -o c1/Two_diagonal_lines.o $(CXXFLAGS)
