@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = c2/cross_desert.o c2/dechotemizing.o c2/newton.o main.o c1/class.o c1/HeapSortmain.o c1/Insersort.o c1/Selectsort.o c1/sortmain.o c1/Two_diagonal_lines.o
-LINKOBJ  = c2/cross_desert.o c2/dechotemizing.o c2/newton.o main.o c1/class.o c1/HeapSortmain.o c1/Insersort.o c1/Selectsort.o c1/sortmain.o c1/Two_diagonal_lines.o
+OBJ      = c2/cross_desert.o c2/dechotemizing.o c2/newton.o main.o c1/class.o c1/HeapSortmain.o c1/Insersort.o c1/Selectsort.o c1/sortmain.o c1/Two_diagonal_lines.o Iteration_main.o
+LINKOBJ  = c2/cross_desert.o c2/dechotemizing.o c2/newton.o main.o c1/class.o c1/HeapSortmain.o c1/Insersort.o c1/Selectsort.o c1/sortmain.o c1/Two_diagonal_lines.o Iteration_main.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -53,3 +53,6 @@ c1/sortmain.o: c1/sortmain.cpp
 
 c1/Two_diagonal_lines.o: c1/Two_diagonal_lines.cpp
 	$(CPP) -c c1/Two_diagonal_lines.cpp -o c1/Two_diagonal_lines.o $(CXXFLAGS)
+
+Iteration_main.o: Iteration_main.cpp
+	$(CPP) -c Iteration_main.cpp -o Iteration_main.o $(CXXFLAGS)

@@ -9,4 +9,4 @@ void Print(int A[],int N);
 void Swap(int* a,int* b);
 int Selectsortmain();
 int Insertsortmain(); 
-int Sortmain()  ; 
+int Sort_main()  ; 

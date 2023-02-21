@@ -15,5 +15,6 @@ int cross_desert( )
     cout<<"k:"<<k-1<<" dis:"<<dis<<endl;
    oil=500*(k-1)+(1000-dis)*( 2*k-1);
 cout<<"storepoint "<<k<<" distance "<<0<<" oilquantity "<<oil;
+cout<<endl;
  }
 
